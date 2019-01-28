@@ -37,13 +37,24 @@ Route::get('/home', [
 	  'uses'=>'PostsController@store',
 	  'as'=>'post.store'
 	]); 
+
+	Route::get('/category/create', [
+  'uses'=>'CategoriesController@create',
+  'as'=>'category.create'
+]);
+
+	Route::get('/categories', [
+  'uses'=>'CategoriesController@index',
+  'as'=>'categories'
+]);
+
+Route::post('/category/store', [
+	'uses'=>'CategoriesController@store',
+	'as'=>'category.store'
+]);
+
 });
 
-
-// Route::get('/post/create', [
-//   'uses'=>'PostsController@create',
-//   'as'=>'post.create'
-// ]);
 
 // Route::post('/post/store', [
 //   'uses'=>'PostsController@store',
