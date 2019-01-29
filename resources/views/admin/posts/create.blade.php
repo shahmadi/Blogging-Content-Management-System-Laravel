@@ -1,15 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-@if(count($errors)>0)
-	<ul class='list-group' style='width: 70%; margin: auto;'>
-		@foreach($errors->all() as $error)
-		<li class='list-group-item text-danger'>
-			{{$error}}
-		</li>
-		@endforeach
-	</ul>
-@endif
+@include('admin.includes.errors')
 	<div class='panel panel-default' style='width: 70%; margin: auto;'>
 		<div class='panel-heading'>
 			Create a new post
